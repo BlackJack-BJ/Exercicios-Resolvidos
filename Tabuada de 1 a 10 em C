@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	int c, n, mul;
+	
+	for (n = 1; n <= 10; n++)
+	{
+		for (c = 1; c <= 10; c++)
+		{ 
+			mul = c * n;
+			printf("%d x %d = %d\n", c, n, mul);
+		}
+	printf("\n");
+	}
+	
+	printf("\n\n");
+	system("pause");
+}
