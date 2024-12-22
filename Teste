@@ -1,1 +1,65 @@
-Teste
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	float nota = 0, n_nota = 0, tot_nota = 0, media = 0, maior, menor;
+	
+	printf("Número negativo para parar ! \n\n");
+	
+	do
+	{
+		printf("Digite uma nota: ");
+		scanf("%f", &nota);
+		
+		if (nota < 0)
+		{
+			break;
+		}
+		
+		else
+		{
+			n_nota += nota;
+			tot_nota ++;
+		}
+		
+		//Maior e menor
+		if (tot_nota == 1)
+		{
+			maior = menor = nota;
+		}
+		
+		else
+		{
+			if (nota > maior)
+			{
+				maior = nota;
+			}
+			
+			if (nota < menor)
+			{
+				menor = nota;
+			}
+		}
+	} while (nota >= 0);
+	
+	if (tot_nota > 0)
+	{
+		media = n_nota / tot_nota;
+	
+		printf("\n•Média = %.2f\n", media);
+		printf("•Maior nota = %.2f\n", maior);
+		printf("•Menor nota = %.2f \n\n", menor);
+		
+	}
+	
+	else
+	{
+		printf("\nNunhuma nota válida digitada\n\n");
+	}
+
+	system("pause");
+}
