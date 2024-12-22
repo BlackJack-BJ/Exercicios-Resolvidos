@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	
+	int v[9], i, div, n;
+	
+	for (i = 0; i < 9; i++)
+	{
+		printf("Digite um número para a posição %d: ", i+1);
+		scanf("%d", &v[i]);
+		
+		if (v[i] % i == 0)
+		{
+			div ++;
+		}
+	}
+	
+	for (i = 0; i < 9; i++)
+	{
+		div = 0;
+		for (n = 1; n <= v[i]; n++)
+		{
+			if (v[i] % n == 0)
+			{	
+				div ++;
+			}
+		
+		}
+		if (div == 2)
+		{
+			printf("\nNúmero primo %d na %dª posição\n",v[i], i+1);
+		}
+	}
+	
+	printf("\n \n");
+	system("pause");
+}
