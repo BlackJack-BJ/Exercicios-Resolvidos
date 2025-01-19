@@ -10,11 +10,13 @@ void repetidor(char *txt, int vezes) {
     }
 }
 
-int main() {
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
     int numero, c, cont = 0;
-    
+
     // É, usei o "c" porque o "i" precisava descansar
-    printf("Digite um número inteiro entre 0 e 8: ");
+    printf("Digite um numero inteiro entre 0 e 8: ");
     scanf("%d", &numero);
 
     for (c = 0; c <= numero; c++) {
