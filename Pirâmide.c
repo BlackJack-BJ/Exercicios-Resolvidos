@@ -3,14 +3,16 @@
 #include <locale.h>
 
 // Eu amo essa palavra, "void"
-void repetidor(char *txt, int vezes) {
+void repetidor(char *txt, int vezes) 
+{
     int c4; // É isso aí, C4
-    for (c4 = 1; c4 <= vezes; c4++) {
+    for (c4 = 1; c4 <= vezes; c4++) 
+    {
         printf("%s ", txt);
     }
 }
 
-int main()
+int main(int argc, char *argv[])
 {
     setlocale(LC_ALL, "Portuguese");
     int numero, c, cont = 0;
@@ -19,7 +21,8 @@ int main()
     printf("Digite um numero inteiro entre 0 e 8: ");
     scanf("%d", &numero);
 
-    for (c = 0; c <= numero; c++) {
+    for (c = 0; c <= numero; c++) 
+    {
         cont++;
         repetidor("*", cont);
         printf("\n");
